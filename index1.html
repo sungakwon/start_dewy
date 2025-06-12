@@ -5,147 +5,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>DEWYTREE - Natural Glow</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Google Analytics 태그 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VFQZ1B9D87"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-VFQZ1B9D87');
-
-        // GA4 이벤트 추적 함수
-        function trackGA4Event(eventName, eventParams) {
-            gtag('event', eventName, eventParams);
-        }
-    </script>
     <link rel="stylesheet" href="/src/index1.css">
-    <script type="module" src="/src/index1.js"></script>
-    <script>
-        // 페이지 로드 시 버전 설정
-        window.addEventListener('load', () => {
-            sessionStorage.setItem('currentVersion', 'a');
-        });
-
-        // setVersionAndGo 함수는 유지 (로고 클릭용)
-        function setVersionAndGo(version) {
-            localStorage.setItem('currentVersion', version);
-            window.location.href = 'index1.html';
-        }
-
-        // 제품 상세 페이지로 이동 함수
-        function goToProductDetail(url, versionType) {
-            sessionStorage.setItem('mainVersion', '1');
-            sessionStorage.setItem('currentVersion', versionType);
-            const urlVersion = (versionType === 'a' ? '1' : '2');
-            console.log('Debug (index1.html): Navigating to product detail with urlVersion:', urlVersion, 'for url:', url);
-            window.location.href = url + '?v=' + urlVersion;
-        }
-    </script>
 </head>
 <body>
     <div class="container">
         <header class="header">
             <div class="header-left">
-                <div class="logo" onclick="location.href='index1.html'">DEWYTREE</div>
-                <nav class="nav-menu">
-                    <a href="brand.html">BRAND</a>
-                    <div class="dropdown">
-                        <a href="product.html">PRODUCT</a>
-                        <div class="dropdown-content">
-                            <div class="menu-column">
-                                <div class="menu-title">BY LINE</div>
-                                <ul class="submenu">
-                                    <li><a href="javascript:void(0)" onclick="goToProductDetail('ac-product.html', 'a')">AC라인</a></li>
-                                    <li><a href="javascript:void(0)" onclick="goToProductDetail('amino-product.html', 'a')">AMINO라인</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="best.html">BEST</a>
-                </nav>
+                <div class="logo">DEWYTREE</div>
             </div>
-            <div class="cart-icon" onclick="location.href='cart.html'">🛒</div>
         </header>
         
         <div class="version-a-content">
             <section class="hero-section">
                 <div class="hero-content">
-                    <h1 class="hero-title">DEWYTREE<br />AC 흔적 진정 라인</h1>
+                    <h1 class="hero-title">AC 흔적 진정 라인</h1>
                     <p class="hero-subtitle">당신의 피부 컨디션을 가꾸는 데일리 AC루틴</p>
-                    <a href="javascript:void(0)" onclick="goToProductDetail('ac-product.html', 'a'); trackGA4Event('purchase_click', {product_line: 'AC', location: 'hero_section'});" class="cta-button">지금 구매하기</a>
+                    <a href="#" class="cta-button">바로 구매하기</a>
                 </div>
                 <div class="hero-image-container">
-                    <a href="javascript:void(0)" onclick="goToProductDetail('ac-product.html', 'a')">
-                        <img src="/images/main01.jpg" alt="DEWYTREE AC 라인 프로모션">
-                    </a>
+                    <!-- <img src="/images/main01.jpg" alt="DEWYTREE AC 라인 프로모션"> -->
                 </div>
             </section>
 
             <section class="best-sellers-section">
                 <h2 class="section-title">BEST SELLERS</h2>
-                <div class="products-grid">
-                    <!-- AC Line Products -->
-                    <div class="product-row">
-                        <div class="product-card" data-product-id="AC-AMPOULE-001" data-price="17900" onclick="goToProductDetail('ac-ampoule-detail.html', 'a'); trackGA4Event('product_click', {product_id: 'AC-AMPOULE-001', product_name: 'AC 딥 장벽 진정 앰플 기획세트', price: 17900});">
-                            <img src="/images/ac-ampoule.jpg" alt="AC 딥 포어 앰플">
-                            <h3>AC 딥 장벽 진정 앰플 기획세트 60ml</h3>
-                            <p class="price">
-                                <span class="original-price">28,000원</span>
-                                <span class="sale-price">17,900원</span>
-                                <span class="discount-rate">36%</span>
-                            </p>
-                        </div>
-                        <div class="product-card" data-product-id="AC-CREAM-001" data-price="17900" onclick="goToProductDetail('ac-cream-detail.html', 'a'); trackGA4Event('product_click', {product_id: 'AC-CREAM-001', product_name: 'AC 딥 장벽 진정 크림', price: 17900});">
-                            <img src="/images/ac-cream.jpg" alt="AC 딥 포어 크림">
-                            <h3>AC 딥 장벽 진정 크림 60ml</h3>
-                            <p class="price">
-                                <span class="original-price">28,000원</span>
-                                <span class="sale-price">17,900원</span>
-                                <span class="discount-rate">36%</span>
-                            </p>
-                        </div>
-                        <div class="product-card" data-product-id="AC-MASK-001" data-price="14900" onclick="goToProductDetail('ac-mask-detail.html', 'a'); trackGA4Event('product_click', {product_id: 'AC-MASK-001', product_name: 'AC 딥 훼이셜 진정 마스크', price: 14900});">
-                            <img src="/images/ac-mask-pack.jpg" alt="AC 딥 포어 마스크">
-                            <h3>AC 딥 훼이셜 진정 마스크 10매</h3>
-                            <p class="price">
-                                <span class="original-price">30,000원</span>
-                                <span class="sale-price">14,900원</span>
-                                <span class="discount-rate">50%</span>
-                            </p>
-                        </div>
+                <div class="products-container">
+                    <div class="product-card" data-product-id="AC-MASK-001" data-price="14900">
+                        <img src="/images/ac-mask-pack.jpg" alt="AC 딥 포어 마스크">
+                        <h3>AC 딥 흔적 진정 잡티 마스크 10매</h3>
+                        <p class="price">
+                            <span class="highlight">한 장당 1,490원!</span><br>
+                            총 10매 14,900원
+                        </p>
+                        <p class="value-text">30,000원 제품을 단돈 14,900원에!<br>가성비 끝판왕 진정 마스크</p>
                     </div>
-                    <!-- Amino Line Products -->
-                    <div class="product-row">
-                        <div class="product-card" onclick="goToProductDetail('amino-powder-detail.html', 'a'); trackGA4Event('product_click', {product_id: 'AMINO-POWDER-001', product_name: '하이 아미노 올 효소 파우더 워시', price: 16900});">
-                            <img src="/images/amino-powder.jpg" alt="아미노 파우더 워시">
-                            <h3>하이 아미노 올 효소 파우더 워시</h3>
-                            <p class="price">
-                                <span class="original-price">19,000원</span><br>
-                                <span class="sale-price">16,900원</span>
-                                <span class="discount-rate">11%</span>
-                            </p>
+                </div>
+            
+
+            <section class="cica-mint-section">
+                <h2 class="section-title">시카민트™로<br />열 오른 피부진정</h2>
+                <div class="cica-mint-content-box">
+                    <div class="cica-mint-header">
+                        <p>듀이트리 독자 성분</p>
+                        <h3>시카민트™ 함유</h3>
+                    </div>
+                    <div class="cica-mint-ingredients">
+                        <div class="ingredient-item">
+                            <p class="ingredient-type">CICA</p>
+                            <h4>시카(병풀) 추출물</h4>
+                            <p class="ingredient-tags">#피부진정 #붉은흔적 진정</p>
+                            <img src="/images/cica.png" alt="Cica Leaf" class="ingredient-image">
                         </div>
-                        <div class="product-card" onclick="goToProductDetail('cleansing-balm-detail.html', 'a'); trackGA4Event('product_click', {product_id: 'AMINO-BALM-001', product_name: '하이 아미노 모공 올 딥 클렌징 밤', price: 22500});">
-                            <img src="/images/amino-balm.jpg" alt="클렌징 밤">
-                            <h3>하이 아미노 모공 올 딥 클렌징 밤</h3>
-                            <p class="price">
-                                <span class="original-price">25,000원</span><br>
-                                <span class="sale-price">22,500원</span>
-                                <span class="discount-rate">10%</span>
-                            </p>
-                        </div>
-                        <div class="product-card" onclick="goToProductDetail('cleansing-milk-detail.html', 'a'); trackGA4Event('product_click', {product_id: 'AMINO-MILK-001', product_name: '하이 아미노 올 클렌징 밀크', price: 19800});">
-                            <img src="/images/amino-milk.gif" alt="클렌징 밀크">
-                            <h3>하이 아미노 올 클렌징 밀크</h3>
-                            <p class="price">
-                                <span class="original-price">22,000원</span><br>
-                                <span class="sale-price">19,800원</span>
-                                <span class="discount-rate">10%</span>
-                            </p>
+                        <div class="plus-icon">+</div>
+                        <div class="ingredient-item">
+                            <p class="ingredient-type">PEPPERMINT</p>
+                            <h4>페퍼민트</h4>
+                            <p class="ingredient-tags">#열감개선 #즉각쿨링</p>
+                            <img src="/images/mint.png" alt="Peppermint Leaf" class="ingredient-image">
                         </div>
                     </div>
                 </div>
+
+                <div class="cica-mint-process-box">
+                    <h3 class="process-title">저온 시카 추출물로<br />시카민트™ 진정 효능 UP!</h3>
+                    <div class="process-steps">
+                        <div class="step-item">
+                            <div class="step-circle">국산 병풀<br />100% 수확</div>
+                            <p class="step-label">STEP 1</p>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step-item">
+                            <div class="step-circle">저온 추출법<br />100시간 추출</div>
+                            <p class="step-label">STEP 2</p>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step-item">
+                            <div class="step-circle">원료 안정화<br />100시간 숙성</div>
+                            <p class="step-label">STEP 3</p>
+                        </div>
+                    </div>
+                    <p class="process-description">저온용출법(40~60°C)으로 100시간 저온 추출한<br />시카(병풀)추출물을 함유해<br />듀이트리 독자성분 시카민트™의 진정 효과 극대화</p>
+                </div>
             </section>
+
+            <section class="feature-cards-section">
+                <div class="feature-card-item">
+                    
+                    <div class="feature-text-content">
+                        <p>흔적 진정 맞춤 설계</p>
+                        <h4><span class="green-text">그린라임C+시카민트™</span></h4>
+                    </div>
+                </div>
+                <div class="feature-card-item">
+                   
+                    <div class="feature-text-content">
+                        <p>얼룩덜룩 기미/주근깨/잡티(색상트러블)</p>
+                        <h4>3중 잡티흔적 <span class="highlight-text green-text">117% 개선</span></h4>
+                    </div>
+                </div>
+                <div class="feature-card-item">
+                   
+                    <div class="feature-text-content">
+                        <p>칙칙한 피부톤 NO</p>
+                        <h4>피부톤(투명도) <span class="highlight-text green-text">111% 개선</span></h4>
+                    </div>
+                </div>
+                <div class="feature-card-item">
+                 
+                    <div class="feature-text-content">
+                        <p>열 자극에 의해</p>
+                        <h4>손상된 피부 <span class="highlight-text green-text">174% 즉각 진정</span></h4>
+                    </div>
+                </div>
+                <div class="feature-card-item">
+                    
+                    <div class="feature-text-content">
+                        <p>얼굴형에 맞게 밀착력 UP</p>
+                        <h4>저자극 초밀착 <span class="green-text">그린 극세사 원단</span></h4>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recommend-section">
+                <p class="recommend-subtitle">Recommend</p>
+                <h2 class="recommend-title">이런 분에게 추천합니다</h2>
+                <ul class="recommend-list">
+                    <li><span class="check-icon">✓</span> 피부 진정은 물론 잡티흔적까지 동시에 케어하고 싶으신 분</li>
+                    <li><span class="check-icon">✓</span> 울긋불긋 올라온 피부고민을 초기에 진압하고 싶으신 분</li>
+                    <li><span class="check-icon">✓</span> 얼룩덜룩 잡티흔적을 집중적으로 관리하고 싶으신 분</li>
+                    <li><span class="check-icon">✓</span> 간편하고 집중적인 피부 케어가 필요하신 분</li>
+                    <li><span class="check-icon">✓</span> 민감성 피부도 안심하고 사용할 수 있는 순한 잡티 케어가 필요하신 분</li>
+                </ul>
+            </section>
+        </section>
+            
+            <form id="orderForm" class="order-form">
+                <h2>배송 정보</h2>
+                <div class="form-group">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">연락처</label>
+                    <input type="tel" id="phone" name="phone" placeholder="휴대폰 번호를 입력하세요" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">주소</label>
+                    <input type="text" id="address" name="address" placeholder="주소를 입력하세요" required>
+                </div>
+                <div class="payment-options">
+                    <label for="payment-method-card">
+                        <input type="radio" id="payment-method-card" name="payment_method" value="card" checked>
+                        카드 결제
+                    </label>
+                    <label for="payment-method-transfer">
+                        <input type="radio" id="payment-method-transfer" name="payment_method" value="transfer">
+                        계좌 이체
+                    </label>
+                    <label for="payment-method-naverpay">
+                        <input type="radio" id="payment-method-naverpay" name="payment_method" value="naverpay">
+                        네이버페이
+                    </label>
+                    <label for="payment-method-kakaopay">
+                        <input type="radio" id="payment-method-kakaopay" name="payment_method" value="kakaopay">
+                        카카오페이
+                    </label>
+                </div>
+                <button type="submit" class="cta-button">결제하기</button>
+            </form>
             
             <section class="features-section">
                 <h2 class="section-title">자연이 주는 특별함</h2>
@@ -177,7 +204,6 @@
             <div class="footer-content">
                 <div class="footer-logo">DEWYTREE</div>
                 <div class="footer-links">
-                    <a href="#">회사소개</a>
                     <a href="#">이용약관</a>
                     <a href="#">개인정보처리방침</a>
                     <a href="#">고객센터</a>
@@ -193,5 +219,15 @@
             </div>
         </footer>
     </div>
+
+    <div id="paymentCompleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>결제가 완료되었습니다!</h2>
+            <p>주문해주셔서 감사합니다. 안전하게 배송해드리겠습니다.</p>
+            <button id="closeModalButton" class="cta-button">확인</button>
+        </div>
+    </div>
 </body>
+<script type="module" src="/src/index1.js"></script>
 </html> 
