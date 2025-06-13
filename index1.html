@@ -6,6 +6,14 @@
     <title>DEWYTREE - Natural Glow</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/index1.css">
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VFQZ1B9D87"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VFQZ1B9D87');
+    </script>
 </head>
 <body>
     <div class="container">
@@ -154,6 +162,7 @@
                     <input type="text" id="address" name="address" placeholder="주소를 입력하세요" required>
                 </div>
                 <div class="payment-options">
+                    <h3>결제 수단</h3>
                     <label for="payment-method-card">
                         <input type="radio" id="payment-method-card" name="payment_method" value="card" checked>
                         카드 결제
@@ -230,4 +239,4 @@
     </div>
 </body>
 <script type="module" src="/src/index1.js"></script>
-</html> 
+</html>

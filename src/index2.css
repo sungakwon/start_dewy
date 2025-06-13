@@ -592,6 +592,7 @@ body {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .order-form h2 {
@@ -633,23 +634,38 @@ body {
     color: #999;
 }
 
-/* order-form 내의 cta-button 스타일 (결제하기 버튼) */
-.order-form .cta-button {
-    display: inline-block;
-    padding: 15px 40px;
+/* 결제하기 버튼 스타일 */
+.order-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 12px 40px;
     background-color: var(--primary-color);
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
     font-weight: 500;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
     text-align: center;
-    width: 200px;
 }
 
-.order-form .cta-button:hover {
-    background-color: #7cb342; /* 호버 시 색상 유지 */
+.order-form button[type="submit"]:hover {
+    background-color: #7cb342;
+}
+
+.order-form button[type="submit"]:disabled {
+    background-color: #ccc !important;
+    cursor: not-allowed !important;
+    color: #666 !important;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.order-form button[type="submit"]:disabled:hover {
+    background-color: #ccc !important;
 }
 
 /* 반응형 스타일 */
@@ -681,7 +697,6 @@ body {
     }
 }
 
-/* 모바일 최적화 */
 @media screen and (max-width: 480px) {
     .order-form {
         margin: 10px;
@@ -704,6 +719,14 @@ body {
     gap: 30px;
     margin-bottom: 20px;
     flex-wrap: nowrap;
+}
+
+
+.payment-options h3 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
 }
 
 .payment-options label {

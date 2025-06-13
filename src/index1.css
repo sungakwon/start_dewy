@@ -674,92 +674,83 @@ body {
 }
 
 /* 결제하기 버튼 스타일 */
-.order-form .cta-button {
-    display: inline-block;
-    padding: 15px 40px;
+.order-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 12px 40px;
     background-color: var(--primary-color);
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
     font-weight: 500;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
     text-align: center;
-    width: 200px;
 }
 
-.order-form .cta-button:hover {
-    background-color: #7cb342; /* 호버 시 색상 유지 */
+.order-form button[type="submit"]:hover {
+    background-color: #7cb342;
 }
 
-/* 반응형 스타일 */
-@media screen and (max-width: 768px) {
-    .order-form {
-        margin: 20px;
-        padding: 20px;
-        width: calc(100% - 40px);
-        box-sizing: border-box;
-    }
-
-    .order-form h2 {
-        font-size: 20px;
-    }
-
-    .form-group {
-        margin-bottom: 15px;
-    }
-
-    .form-group input,
-    .form-group select {
-        padding: 10px;
-        font-size: 16px; /* 모바일에서 더 큰 폰트 사이즈 */
-    }
-
-    .submit-button {
-        padding: 12px;
-        font-size: 16px;
-    }
+.order-form button[type="submit"]:disabled {
+    background-color: #ccc !important;
+    cursor: not-allowed !important;
+    color: #666 !important;
+    opacity: 0.7;
+    pointer-events: none;
 }
 
-/* 모바일 최적화 */
-@media screen and (max-width: 480px) {
-    .order-form {
-        margin: 10px;
-        padding: 15px;
-        width: calc(100% - 20px);
-    }
-
-    .form-group input,
-    .form-group select {
-        padding: 12px;
-        font-size: 16px;
-    }
+.order-form button[type="submit"]:disabled:hover {
+    background-color: #ccc !important;
 }
 
 /* 결제 수단 스타일 */
 .payment-options {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+    margin: 20px 0;
+    padding: 15px;
+    /* background-color: #f8f9fa; */
+    border-radius: 8px;
+}
+
+.payment-options h3 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+}
+
+.payment-option {
     margin-bottom: 20px;
-    flex-wrap: nowrap;
+    padding: 15px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-.payment-options label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    white-space: nowrap;
-    font-size: 14px;
+.payment-option h4 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #495057;
+    font-weight: 500;
 }
 
-.payment-options input[type="radio"] {
-    margin: 0;
+.payment-option label {
+    display: block;
+    padding: 12px;
+    border-radius: 4px;
     cursor: pointer;
-    width: 16px;
-    height: 16px;
+    transition: background-color 0.3s;
+}
+
+.payment-option label:hover {
+    background-color: #f8f9fa;
+}
+
+.payment-option input[type="radio"] {
+    margin-right: 10px;
 }
 
 /* Recommend Section 스타일 */
