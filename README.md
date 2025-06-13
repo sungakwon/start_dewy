@@ -23,7 +23,9 @@ A/B 버전 랜덤 노출: index.html에서 JS를 통해 랜덤하게 index1.html
 - 수집한 데이터 항목
 
  id: 각 기록을 고유하게 구분하기 위해 사용
+
  name, phone, address: 실제 구매 의사 확인을 위한 기본 배송 정보
+
  payment_method: 사용자 결제 수단 선호도 분석을 위해 수집
 
 - 수집 데이터 자료
