@@ -1,5 +1,6 @@
 // Supabase 클라이언트 초기화
 import { supabase } from './supabase-client.js';
+import "./index1.css";
 
 // 바로 구매하기 버튼 이벤트
 const buyNowButton = document.querySelector('.hero-section .cta-button');

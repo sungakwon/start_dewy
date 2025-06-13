@@ -1,5 +1,6 @@
 // Supabase 클라이언트 초기화
 import { supabase } from './supabase-client.js';
+import "./index2.css";
 
 // 폼 요소들 초기화
 const nameInput = document.getElementById('name');
