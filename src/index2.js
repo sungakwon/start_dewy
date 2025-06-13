@@ -19,7 +19,8 @@ function trackBuyNowClick() {
     gtag('event', 'click', {
         'event_category': 'purchase_flow',
         'event_label': 'buy_now_clicked',
-        'event_action': 'click'
+        'event_action': 'click',
+        'version': "B",
     });
 }
 
@@ -27,7 +28,8 @@ function trackPaymentClick() {
     gtag('event', 'click', {
         'event_category': 'purchase_flow',
         'event_label': 'payment_clicked',
-        'event_action': 'click'
+        'event_action': 'click',
+        'version': "B",
     });
 }
 
